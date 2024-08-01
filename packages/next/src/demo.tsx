@@ -6,8 +6,8 @@ import RichTextEditor from "./RichTextEditor";
 export default function Demo() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen">
-      <div className="border-2 w-fit h-fit border-slate-500">
-        <RichTextEditor />
+      <div className="w-fit h-fit">
+        <RichTextEditor className="p-3 bg-red-500 [&>div]:outline-none" />
       </div>
     </div>
   );

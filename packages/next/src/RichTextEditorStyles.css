@@ -1,0 +1,15 @@
+div[slot="richTextEditor"] > div > h1 {
+    font-size: xx-large;
+}
+div[slot="richTextEditor"] > div > h2 {
+    font-size: x-large;
+}
+div[slot="richTextEditor"] > div > h3 {
+    font-size: large;
+}
+
+div[slot="richTextEditor"] > div > p {
+    font-size: medium;
+    background-color: #cccccc;
+    margin-bottom: 5px;
+}

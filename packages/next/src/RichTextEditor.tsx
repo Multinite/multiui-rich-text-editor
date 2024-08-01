@@ -1,15 +1,27 @@
 "use client";
-
-import { useEditor, EditorContent } from "@tiptap/react";
+import "./RichTextEditorStyles.css";
+import { useEditor, EditorContent, EditorContentProps } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 
-const RichTextEditor = () => {
+const RichTextEditor = (
+  editorContentProps: Partial<Omit<EditorContentProps, "ref">>
+) => {
   const editor = useEditor({
-    extensions: [StarterKit],
-    content: "<p>Hello World! 🌎️</p>",
+    extensions: [
+      StarterKit.configure({
+        heading: { levels: [1, 2, 3] },
+      }),
+    ],
+    content:"hey"
   });
 
-  return <EditorContent editor={editor} />;
+  return (
+    <EditorContent
+      editor={editorContentProps.editor || editor}
+      {...editorContentProps}
+      slot={editorContentProps.slot || `richTextEditor`}
+    />
+  );
 };
 
 export default RichTextEditor;
