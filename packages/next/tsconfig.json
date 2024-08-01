@@ -2,8 +2,24 @@
   "extends": "../ts/tsconfig.json",
   "compilerOptions": {
     "outDir": "dist",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "declaration": true,
     "jsx": "preserve"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts",
+    "dist"
+  ],
+  "include": ["src/**/*"]
 }

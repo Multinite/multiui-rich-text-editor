@@ -1,4 +1,6 @@
 "use client";
-export default function Button({children}: {children: React.ReactNode}){
-    return <button>{children}</button>
+import { ReactNode } from "react";
+
+export default function Button({ children }: { children: ReactNode }) {
+  return <button>{children}</button>;
 }
